@@ -221,7 +221,6 @@ addToCartButtons.forEach((button, index) => {
     }, 900);
 
     updateCart();
-    openCart();
   });
 });
 

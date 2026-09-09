@@ -270,6 +270,17 @@ a {
     background 0.3s ease;
 }
 
+.nav__close span {
+  pointer-events: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+
+  color: var(--milk-color);
+}
+
 .nav__cart {
   position: relative;
 
@@ -316,14 +327,14 @@ a {
 /*=============== MOBILE MENU MODAL ===============*/
 .nav__menu {
   position: fixed;
-
   top: 0;
   left: 0;
 
   width: 100vw;
+  height: 100vh;
   height: 100dvh;
 
-  z-index: var(--z-menu);
+  z-index: calc(var(--z-menu) + 20);
 
   display: flex;
   align-items: center;
@@ -346,7 +357,7 @@ a {
   opacity: 0;
   visibility: hidden;
 
-  transform: translateY(-20px);
+  transform: translateY(-18px);
 
   pointer-events: none;
 
@@ -365,12 +376,17 @@ a {
   pointer-events: auto;
 }
 
+.nav__menu.show-menu ~ .nav__actions .nav__toggle {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .nav__list {
   width: min(100%, 340px);
 
   display: flex;
   flex-direction: column;
-
   align-items: center;
 
   margin: 0;
@@ -381,7 +397,6 @@ a {
 
 .nav__list li {
   width: 100%;
-
   border-bottom: 1px solid rgba(234, 218, 196, 0.1);
 }
 
@@ -415,15 +430,37 @@ a {
 .nav__link:hover,
 .nav__link.active-link {
   color: var(--gold-color);
-
   background-color: rgba(213, 173, 107, 0.05);
+}
+
+.nav__link::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+
+  width: 0;
+  height: 2px;
+
+  background-color: var(--gold-color);
+
+  transform: translateX(-50%);
+
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after,
+.nav__link.active-link::after {
+  width: 28px;
 }
 
 .nav__close {
   position: absolute;
-
   top: 18px;
   right: 18px;
+
+  z-index: 10;
 
   width: 42px;
   height: 42px;
@@ -432,24 +469,40 @@ a {
   place-items: center;
 
   border: 1px solid var(--border-color);
-
   border-radius: 50%;
 
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(255, 255, 255, 0.05);
 
   color: var(--milk-color);
 
-  font-size: 22px;
+  cursor: pointer;
+  pointer-events: auto;
 
   transition:
     color 0.3s ease,
+    border-color 0.3s ease,
     background-color 0.3s ease,
     transform 0.3s ease;
 }
 
+.nav__close span {
+  display: block;
+
+  color: var(--milk-color);
+
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+
+  pointer-events: none;
+
+  transform: translateY(-1px);
+}
+
 .nav__close:hover {
   color: var(--gold-color);
-
+  border-color: rgba(213, 173, 107, 0.4);
   background-color: var(--gold-soft);
 
   transform: rotate(90deg);
@@ -581,6 +634,7 @@ a {
   animation-delay: 1.2s;
 }
 
+
 @keyframes float-decor {
   0%,
   100% {
@@ -590,6 +644,94 @@ a {
   50% {
     transform: translateY(-18px) rotate(8deg);
   }
+}
+
+/* HOME EXTRA DECOR */
+
+.home__extra-decor {
+  position: absolute;
+  z-index: 3;
+
+  pointer-events: none;
+  user-select: none;
+
+  object-fit: contain;
+}
+
+.home__extra-decor--wax {
+  top: 54%;
+  right: 6%;
+
+  width: 72px;
+
+  transform: rotate(12deg);
+}
+
+.home__extra-decor--shell {
+  top: 66%;
+  right: 12%;
+
+  width: 82px;
+
+  transform: rotate(-18deg);
+}
+
+/*=============== RITUAL DECOR ===============*/
+
+.ritual {
+  position: relative;
+  overflow: hidden;
+}
+
+.ritual__decor {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+  user-select: none;
+
+  object-fit: contain;
+}
+
+/* LEFT */
+
+.ritual__decor--wax {
+  top: 12%;
+  left: -8px;
+
+  width: 48px;
+
+  transform: rotate(-16deg);
+}
+
+.ritual__decor--shell {
+  top: 25%;
+  left: 10px;
+
+  width: 52px;
+
+  transform: rotate(18deg);
+}
+
+/* RIGHT */
+
+.ritual__decor--petal-1 {
+  top: 14%;
+  right: -8px;
+
+  width: 48px;
+
+  transform: rotate(-25deg);
+}
+
+.ritual__decor--petal-2 {
+  top: 35%;
+  right: 5px;
+
+  width: 52px;
+
+  transform: rotate(18deg);
 }
 
 /*=============== ABOUT ===============*/
@@ -1628,6 +1770,21 @@ a {
   .checkout-modal__container {
     padding: 40px;
   }
+
+   .home__extra-decor--wax {
+    top: 50%;
+    right: 7%;
+
+    width: 88px;
+  }
+
+  .home__extra-decor--shell {
+    top: 65%;
+    right: 12%;
+
+    width: 96px;
+  }
+
 }
 /*=============== DESKTOP ===============*/
 @media screen and (min-width: 1150px) {
@@ -1658,6 +1815,8 @@ a {
 
   .nav__menu {
     position: static;
+
+    z-index: auto;
 
     inset: auto;
 
@@ -1868,6 +2027,33 @@ a {
     width: 85px;
   }
 
+.ritual__decor--wax {
+  top: 16%;
+  left: 2%;
+
+  width: 76px;
+}
+
+.ritual__decor--shell {
+  top: 48%;
+  left: 4%;
+
+  width: 82px;
+}
+
+.ritual__decor--petal-1 {
+  top: 17%;
+  right: 3%;
+
+  width: 72px;
+}
+
+.ritual__decor--petal-2 {
+  top: 55%;
+  right: 2%;
+
+  width: 78px;
+}
   .ritual__container {
     gap: 80px;
   }
