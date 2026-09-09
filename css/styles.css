@@ -773,7 +773,7 @@ a {
 }
 
 .about__image:hover img {
-  transform: scale(1.01);
+  transform: scale(1.02);
 }
 
 .about__image--large img {
@@ -907,7 +907,7 @@ a {
 }
 
 .product-card:hover .product-card__image img {
-  transform: scale(1.015);
+  transform: scale(1.02);
 }
 
 .product-card__content {
@@ -996,7 +996,7 @@ a {
 
 .ritual__decor {
   position: absolute;
-  z-index: 3;
+  z-index: 6;
 
   display: block;
   height: auto;
@@ -1244,7 +1244,7 @@ a {
   right: -15px;
   bottom: 166px;
 
-  width: 200px;
+  width: 180px;
 
   animation: float-decor 5s ease-in-out infinite;
 }
@@ -1810,25 +1810,6 @@ a {
     padding-bottom: 110px;
   }
 
-  .ritual__decor--wax {
-    left: 24px;
-    width: 68px;
-  }
-
-  .ritual__decor--shell {
-    left: 26px;
-    width: 76px;
-  }
-
-  .ritual__decor--petal-1 {
-    right: 22px;
-    width: 64px;
-  }
-
-  .ritual__decor--petal-2 {
-    right: 24px;
-    width: 72px;
-  }
 .home__container {
     padding-top: 95px;
     padding-bottom: 500px;
@@ -1878,21 +1859,168 @@ a {
     padding: 40px;
   }
 
-   .home__extra-decor--wax {
-    top: 50%;
-    right: 7%;
 
-    width: 88px;
+}
+
+/*=============== TABLET 768PX - 1149PX ===============*/
+@media screen and (min-width: 768px) and (max-width: 1149px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  #about,
+  #shop,
+  #ritual,
+  #contact {
+    scroll-margin-top: 100px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 40px;
+  }
+
+  /* ABOUT */
+  .about__container {
+    max-width: 100%;
+  }
+
+  .about__heading {
+    width: 100%;
+    max-width: 680px;
+    margin-left: 0;
+    margin-bottom: 44px;
+  }
+
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 36px;
+  }
+
+  .about__image--large,
+  .about__content,
+  .about__image--small {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .about__image--large img {
+    width: 100%;
+    height: 520px;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .about__content {
+    gap: 20px;
+  }
+
+  .about__content > p {
+    width: 100%;
+    max-width: none;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .about__stats {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .about__stats strong {
+    font-size: 12px;
+  }
+
+  .about__stats span {
+    font-size: 8px;
+  }
+
+  .about__image--small img {
+    width: 100%;
+    height: 240px;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  /* SHOP */
+  .shop__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  /* RITUAL */
+  .ritual__container {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .ritual__image,
+  .ritual__content {
+    min-width: 0;
+  }
+
+  .ritual__image img {
+    width: 100%;
+  }
+
+  .ritual__decor--wax {
+    left: 18px;
+    width: 62px;
+  }
+
+  .ritual__decor--shell {
+    left: 55px;
+    width: 180px;
+    z-index: 7;
+  }
+
+  .ritual__decor--petal-1 {
+    right: 18px;
+    width: 60px;
+  }
+
+  .ritual__decor--petal-2 {
+    right: 22px;
+    width: 66px;
+  }
+
+  /* CONTACT */
+  .contact__container {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 40px;
+  }
+
+  .contact__visual,
+  .contact__content {
+    min-width: 0;
+  }
+
+  .contact__decor {
+    right: -8px;
+    bottom: 70px;
+    width: 110px;
+  }
+
+  /* HOME DECOR */
+  .home__extra-decor--wax {
+    top: 52%;
+    right: 6%;
+    width: 78px;
   }
 
   .home__extra-decor--shell {
-    top: 65%;
-    right: 12%;
-
-    width: 196px;
+    top: 66%;
+    right: 10%;
+    width: 120px;
   }
-
 }
+
 /*=============== DESKTOP ===============*/
 @media screen and (min-width: 1150px) {
   :root {
@@ -2084,18 +2212,55 @@ a {
     width: 90px;
   }
 
+  .about__container {
+    max-width: 1180px;
+  }
+
   .about__heading {
-    margin-left: 52%;
+    width: 48%;
+    margin-left: auto;
+    margin-bottom: 55px;
   }
 
   .about__grid {
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: 80px;
+  }
 
-    gap: 65px;
+  .about__image--large {
+    width: 100%;
   }
 
   .about__image--large img {
-    height: 720px;
+    width: 100%;
+    height: 610px;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .about__content {
+    gap: 26px;
+  }
+
+  .about__content > p {
+    max-width: 520px;
+  }
+
+  .about__stats {
+    max-width: 520px;
+  }
+
+  .about__image--small {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .about__image--small img {
+    width: 100%;
+    height: 280px;
+    min-height: 0;
+    object-fit: cover;
   }
 
   .shop__grid {
@@ -2134,35 +2299,56 @@ a {
     width: 85px;
   }
 
-  .ritual__decor--wax {
-    top: 15%;
-    left: 2%;
-    width: 82px;
+  .ritual.section {
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
-  .ritual__decor--shell {
-    top: 46%;
-    left: 2.5%;
-    width: 90px;
-  }
-
-  .ritual__decor--petal-1 {
-    top: 17%;
-    right: 2%;
-    width: 78px;
-  }
-
-  .ritual__decor--petal-2 {
-    top: 50%;
-    right: 2.5%;
-    width: 86px;
-  }
-.ritual__container {
+  .ritual__container {
+    position: relative;
+    max-width: 1180px;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
     gap: 80px;
+    z-index: 2;
   }
 
   .ritual__image {
+    width: 100%;
     border-radius: 34px;
+  }
+
+  .ritual__image img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .ritual__content {
+    max-width: 520px;
+  }
+
+  .ritual__decor--wax {
+    top: 18%;
+    left: calc(50% - 650px);
+    width: 72px;
+  }
+
+  .ritual__decor--shell {
+    top: 55%;
+    left: calc(50% - 640px);
+    width: 82px;
+  }
+
+  .ritual__decor--petal-1 {
+    top: 20%;
+    right: calc(50% - 650px);
+    width: 68px;
+  }
+
+  .ritual__decor--petal-2 {
+    top: 55%;
+    right: calc(50% - 640px);
+    width: 76px;
   }
 
   .contact__container {
