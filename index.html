@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--=============== REMIXICONS ===============-->
+    <meta
+      name="description"
+      content="EMBER Candle Shop — handmade sculptural candles and curated ritual sets."
+    />
+
+    <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+    <!--=============== REMIXICON ===============-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
@@ -20,38 +27,62 @@
     <!--=============== HEADER ===============-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#home" class="nav-logo">
-          <span class="nav-logo__icon">E</span>
-          <span>EMBER</span>
+        <a href="#home" class="nav__logo">
+          <img src="./img/logo.png" alt="EMBER Candle Shop logo" />
         </a>
 
-        <div class="nav-menu" id="js-nav-menu">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link">HOME</a></li>
-            <li><a href="#about" class="nav-link">ABOUT</a></li>
-            <li><a href="#shop" class="nav-link">SHOP</a></li>
-            <li><a href="#ritual" class="nav-link">RITUAL SET</a></li>
-            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+        <div class="nav__menu" id="js-nav-menu">
+          <ul class="nav__list">
+            <li>
+              <a href="#home" class="nav__link active-link">HOME</a>
+            </li>
+
+            <li>
+              <a href="#about" class="nav__link">ABOUT</a>
+            </li>
+
+            <li>
+              <a href="#shop" class="nav__link">SHOP</a>
+            </li>
+
+            <li>
+              <a href="#ritual" class="nav__link">RITUAL SET</a>
+            </li>
+
+            <li>
+              <a href="#contact" class="nav__link">CONTACT</a>
+            </li>
           </ul>
 
-          <button class="nav-close" id="js-nav-close" type="button">
+          <button
+            class="nav__close"
+            id="js-nav-close"
+            type="button"
+            aria-label="Close menu"
+          >
             <i class="ri-close-large-line"></i>
           </button>
         </div>
 
-        <div class="nav-actions">
+        <div class="nav__actions">
           <button
-            class="nav-cart"
+            class="nav__cart"
             id="js-cart-open"
             type="button"
             aria-label="Open shopping cart"
           >
             <i class="ri-shopping-bag-4-line"></i>
-            <span class="nav-cart__count">0</span>
+
+            <span class="nav__cart-count" id="js-cart-count">0</span>
           </button>
 
-          <button class="nav-toggle" id="js-nav-toggle" type="button">
-            <i class="ri-apps-2-fill"></i>
+          <button
+            class="nav__toggle"
+            id="js-nav-toggle"
+            type="button"
+            aria-label="Open menu"
+          >
+            <i class="ri-menu-3-line"></i>
           </button>
         </div>
       </nav>
@@ -59,14 +90,38 @@
 
     <main class="main">
       <!--=============== HOME ===============-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <span class="home__eyebrow">HANDMADE CANDLE SHOP</span>
+      <section class="home" id="home">
+        <div class="home__background">
+          <img
+            src="./img/home-img.jpg"
+            alt="EMBER sculptural candle collection"
+            class="home__background-img"
+          />
+        </div>
+
+        <div class="home__overlay"></div>
+
+        <img
+          src="./img/decor-petal-2.png"
+          alt=""
+          class="home__decor home__decor--1"
+        />
+
+        <img
+          src="./img/decor-petal-1.png"
+          alt=""
+          class="home__decor home__decor--2"
+        />
+
+        <div class="home__container container">
+          <div class="home__content">
+            <span class="home__eyebrow"> HANDMADE CANDLE SHOP </span>
 
             <h1 class="home__title">
-              SCULPTED <br />
-              CANDLES <br />
+              SCULPTED
+              <br />
+              CANDLES
+              <br />
               <span>MADE TO GLOW</span>
             </h1>
 
@@ -79,23 +134,1000 @@
               SHOP CANDLES
               <i class="ri-arrow-right-line"></i>
             </a>
+
+            <div class="home__features">
+              <div class="home__feature">
+                <i class="ri-hand-heart-line"></i>
+
+                <span>
+                  HAND
+                  <br />
+                  POURED
+                </span>
+              </div>
+
+              <div class="home__feature">
+                <i class="ri-heart-3-line"></i>
+
+                <span>
+                  SMALL
+                  <br />
+                  BATCHES
+                </span>
+              </div>
+
+              <div class="home__feature">
+                <i class="ri-sparkling-2-line"></i>
+
+                <span>
+                  PREMIUM
+                  <br />
+                  QUALITY
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== ABOUT ===============-->
+      <section class="about section" id="about">
+        <div class="about__container container">
+          <div class="section__heading about__heading">
+            <span class="section__eyebrow">OUR STORY</span>
+
+            <h2 class="section__title">
+              MADE SLOWLY.
+              <br />
+              <span>BURNED BEAUTIFULLY.</span>
+            </h2>
+
+            <p class="section__description">
+              EMBER began with a simple idea: everyday candles should feel like
+              small pieces of art.
+            </p>
           </div>
 
-          <div class="home__images">
-            <div class="home__glow"></div>
+          <div class="about__grid">
+            <div class="about__image about__image--large">
+              <img
+                src="./img/about-img-1.webp"
+                alt="Handmade EMBER candle production"
+              />
 
-            <div class="home__placeholder">
-              <span>EMBER</span>
-              <p>Hero image coming next</p>
+              <span class="about__badge">
+                HAND
+                <br />
+                POURED
+              </span>
             </div>
 
-            <span class="home__decor home__decor--1">✦</span>
-            <span class="home__decor home__decor--2">✦</span>
-            <span class="home__decor home__decor--3">✦</span>
+            <div class="about__content">
+              <p>
+                Each candle is created in small batches and finished by hand. We
+                focus on sculptural forms, warm natural tones and pieces that
+                feel just as beautiful unlit as they do when glowing.
+              </p>
+
+              <p>
+                From playful shapes to statement pieces, EMBER is designed to
+                make everyday spaces feel calmer, warmer and more personal.
+              </p>
+
+              <div class="about__stats">
+                <div>
+                  <strong>100%</strong>
+                  <span>Hand finished</span>
+                </div>
+
+                <div>
+                  <strong>Small</strong>
+                  <span>Batch production</span>
+                </div>
+
+                <div>
+                  <strong>Made</strong>
+                  <span>With care</span>
+                </div>
+              </div>
+
+              <div class="about__image about__image--small">
+                <img
+                  src="./img/about-img-2.webp"
+                  alt="EMBER candles styled in a warm interior"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== SHOP ===============-->
+      <section class="shop section" id="shop">
+        <img
+          src="./img/decor-flower.png"
+          alt=""
+          class="shop__decor shop__decor--1"
+        />
+
+        <img
+          src="./img/decor-wax.png"
+          alt=""
+          class="shop__decor shop__decor--2"
+        />
+
+        <div class="shop__container container">
+          <div class="section__heading">
+            <span class="section__eyebrow">THE COLLECTION</span>
+
+            <h2 class="section__title">
+              FIND YOUR
+              <span>FAVOURITE GLOW</span>
+            </h2>
+
+            <p class="section__description">
+              Sculptural candles made to be noticed, gifted and enjoyed.
+            </p>
+          </div>
+
+          <div class="shop__grid">
+            <!-- 1 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-rose.webp" alt="Rose Bloom Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Rose Bloom Candle</h3>
+
+                  <span class="product-card__type"> Floral Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£16</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Rose Bloom Candle"
+                    data-price="16"
+                    data-image="./img/candle-rose.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-bubble.webp" alt="Bubble Cube Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Bubble Cube Candle</h3>
+
+                  <span class="product-card__type"> Modern Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£15</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Bubble Cube Candle"
+                    data-price="15"
+                    data-image="./img/candle-bubble.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-bodygirl.webp" alt="Venus Body Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Venus Body Candle</h3>
+
+                  <span class="product-card__type"> Sculpture Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£19</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Venus Body Candle"
+                    data-price="19"
+                    data-image="./img/candle-bodygirl.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-bodybuilder.webp"
+                  alt="Bodybuilder Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Bodybuilder Candle</h3>
+
+                  <span class="product-card__type"> Sculpture Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£20</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Bodybuilder Candle"
+                    data-price="20"
+                    data-image="./img/candle-bodybuilder.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-shell-white.webp"
+                  alt="Ivory Shell Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Ivory Shell Candle</h3>
+
+                  <span class="product-card__type"> Coastal Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£16</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Ivory Shell Candle"
+                    data-price="16"
+                    data-image="./img/candle-shell-white.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-shell-black.webp"
+                  alt="Noir Shell Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Noir Shell Candle</h3>
+
+                  <span class="product-card__type"> Coastal Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Noir Shell Candle"
+                    data-price="18"
+                    data-image="./img/candle-shell-black.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-dolphin.webp"
+                  alt="Ocean Dolphin Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Ocean Dolphin Candle</h3>
+
+                  <span class="product-card__type"> Coastal Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Ocean Dolphin Candle"
+                    data-price="18"
+                    data-image="./img/candle-dolphin.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-elephant.webp" alt="Elephant Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Elephant Candle</h3>
+
+                  <span class="product-card__type"> Playful Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Elephant Candle"
+                    data-price="18"
+                    data-image="./img/candle-elephant.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 9 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-duck-white.webp"
+                  alt="Ivory Duck Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Ivory Duck Candle</h3>
+
+                  <span class="product-card__type"> Playful Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£14</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Ivory Duck Candle"
+                    data-price="14"
+                    data-image="./img/candle-duck-white.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 10 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-duck-black.webp"
+                  alt="Noir Duck Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Noir Duck Candle</h3>
+
+                  <span class="product-card__type"> Playful Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£15</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Noir Duck Candle"
+                    data-price="15"
+                    data-image="./img/candle-duck-black.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 11 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-arch.webp" alt="Sunset Arch Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Sunset Arch Candle</h3>
+
+                  <span class="product-card__type"> Modern Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Sunset Arch Candle"
+                    data-price="18"
+                    data-image="./img/candle-arch.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 12 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-twist.webp"
+                  alt="Pink Knot and Twist Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Pink Twist Duo</h3>
+
+                  <span class="product-card__type"> Modern Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£22</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Pink Twist Duo"
+                    data-price="22"
+                    data-image="./img/candle-twist.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 13 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-peony.webp" alt="Crimson Peony Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Crimson Peony Candle</h3>
+
+                  <span class="product-card__type"> Floral Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Crimson Peony Candle"
+                    data-price="18"
+                    data-image="./img/candle-peony.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 14 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-moon-yellow.webp"
+                  alt="Golden Moon Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Golden Moon Candle</h3>
+
+                  <span class="product-card__type"> Celestial Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£17</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Golden Moon Candle"
+                    data-price="17"
+                    data-image="./img/candle-moon-yellow.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 15 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-moon-white.webp"
+                  alt="Ivory Moon Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Ivory Moon Candle</h3>
+
+                  <span class="product-card__type"> Celestial Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£16</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Ivory Moon Candle"
+                    data-price="16"
+                    data-image="./img/candle-moon-white.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 16 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-starfish.webp"
+                  alt="Noir Starfish Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Noir Starfish Candle</h3>
+
+                  <span class="product-card__type"> Coastal Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£16</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Noir Starfish Candle"
+                    data-price="16"
+                    data-image="./img/candle-starfish.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 17 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-red-heart.webp"
+                  alt="Crimson Heart Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Crimson Heart Candle</h3>
+
+                  <span class="product-card__type"> Love Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£17</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Crimson Heart Candle"
+                    data-price="17"
+                    data-image="./img/candle-red-heart.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 18 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-black-heart.webp"
+                  alt="Noir Heart Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Noir Heart Candle</h3>
+
+                  <span class="product-card__type"> Love Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£18</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Noir Heart Candle"
+                    data-price="18"
+                    data-image="./img/candle-black-heart.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 19 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img
+                  src="./img/candle-motorcycle.webp"
+                  alt="Midnight Motorcycle Candle"
+                />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Midnight Motorcycle</h3>
+
+                  <span class="product-card__type"> Statement Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£24</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Midnight Motorcycle"
+                    data-price="24"
+                    data-image="./img/candle-motorcycle.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 20 -->
+            <article class="product-card">
+              <div class="product-card__image">
+                <img src="./img/candle-car.webp" alt="Red Sports Car Candle" />
+              </div>
+
+              <div class="product-card__content">
+                <div>
+                  <h3 class="product-card__title">Red Sports Car Candle</h3>
+
+                  <span class="product-card__type"> Statement Collection </span>
+                </div>
+
+                <div class="product-card__bottom">
+                  <span class="product-card__price">£24</span>
+
+                  <button
+                    class="product-card__button js-add-to-cart"
+                    type="button"
+                    data-title="Red Sports Car Candle"
+                    data-price="24"
+                    data-image="./img/candle-car.webp"
+                  >
+                    <i class="ri-shopping-bag-4-line"></i>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== RITUAL SET ===============-->
+      <section class="ritual section" id="ritual">
+        <div class="ritual__container container">
+          <div class="ritual__image">
+            <img src="./img/ritual-set.webp" alt="EMBER Ritual Set" />
+          </div>
+
+          <div class="ritual__content">
+            <span class="section__eyebrow"> CURATED FOR SLOW EVENINGS </span>
+
+            <h2 class="ritual__title">
+              EMBER
+              <br />
+              <span>RITUAL SET</span>
+            </h2>
+
+            <p class="ritual__description">
+              A calming collection designed for warm baths, slow evenings and
+              thoughtful gifting.
+            </p>
+
+            <div class="ritual__includes">
+              <span>Coral Sculptural Candle</span>
+              <span>Starfish Candle</span>
+              <span>Mineral Bath Salts</span>
+              <span>Decorative Shell Pieces</span>
+            </div>
+
+            <div class="ritual__bottom">
+              <div>
+                <small>SET PRICE</small>
+                <strong>£32</strong>
+              </div>
+
+              <button
+                class="button js-add-to-cart"
+                type="button"
+                data-title="EMBER Ritual Set"
+                data-price="32"
+                data-image="./img/ritual-set.webp"
+              >
+                ADD TO CART
+                <i class="ri-shopping-bag-4-line"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--=============== CONTACT ===============-->
+      <section class="contact section" id="contact">
+        <div class="contact__container container">
+          <div class="contact__content">
+            <span class="section__eyebrow">STAY CONNECTED</span>
+
+            <h2 class="contact__title">
+              FOLLOW
+              <br />
+              <span>THE GLOW</span>
+            </h2>
+
+            <p>
+              Discover new designs, behind-the-scenes candle making and the
+              latest EMBER collections.
+            </p>
+
+            <div class="contact__socials">
+              <a href="https://instagram.com/" target="_blank" rel="noopener">
+                <i class="ri-instagram-line"></i>
+                Instagram
+              </a>
+
+              <a href="https://facebook.com/" target="_blank" rel="noopener">
+                <i class="ri-facebook-circle-line"></i>
+                Facebook
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__visual">
+            <img src="./img/about-img-2.png" alt="EMBER candle interior" />
+
+            <img src="./img/decor-petal-2.png" alt="" class="contact__decor" />
           </div>
         </div>
       </section>
     </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
+      <div class="footer__container container">
+        <a href="#home" class="footer__logo">
+          <img src="./img/logo.png" alt="EMBER Candle Shop" />
+        </a>
+
+        <p>Handmade sculptural candles for warmer everyday moments.</p>
+
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#shop">Shop</a>
+          <a href="#ritual">Ritual Set</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 EMBER Candle Shop</span>
+
+          <span>Handmade with care</span>
+        </div>
+      </div>
+    </footer>
+
+    <!--=============== CART OVERLAY ===============-->
+    <div class="cart-overlay" id="js-cart-overlay"></div>
+
+    <!--=============== CART ===============-->
+    <aside class="cart" id="js-cart">
+      <div class="cart__header">
+        <div>
+          <span>YOUR SELECTION</span>
+          <h2>Your cart</h2>
+        </div>
+
+        <button
+          class="cart__close"
+          id="js-cart-close"
+          type="button"
+          aria-label="Close cart"
+        >
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="cart__content" id="js-cart-content">
+        <div class="cart__empty" id="js-cart-empty">
+          <i class="ri-shopping-bag-4-line"></i>
+          <h3>Your cart is empty</h3>
+          <p>Add something beautiful.</p>
+        </div>
+      </div>
+
+      <div class="cart__footer">
+        <div class="cart__total-row">
+          <span>Total</span>
+          <strong id="js-cart-total">£0.00</strong>
+        </div>
+
+        <button class="cart__checkout" id="js-checkout-open" type="button">
+          CHECKOUT
+          <i class="ri-arrow-right-line"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!--=============== CHECKOUT OVERLAY ===============-->
+    <div class="checkout-overlay" id="js-checkout-overlay"></div>
+
+    <!--=============== CHECKOUT ===============-->
+    <section class="checkout-modal" id="js-checkout-modal" aria-hidden="true">
+      <div class="checkout-modal__container">
+        <button
+          class="checkout-modal__close"
+          id="js-checkout-close"
+          type="button"
+          aria-label="Close checkout"
+        >
+          <i class="ri-close-line"></i>
+        </button>
+
+        <div class="checkout-modal__content" id="js-checkout-form-content">
+          <span class="section__eyebrow">FINAL STEP</span>
+
+          <h2>Complete your order</h2>
+
+          <p>Enter your details and we’ll prepare your EMBER order.</p>
+
+          <form class="checkout-form" id="js-checkout-form">
+            <label>
+              Name *
+              <input
+                type="text"
+                name="name"
+                placeholder="Your full name"
+                required
+              />
+            </label>
+
+            <label>
+              Phone *
+              <input type="tel" name="phone" placeholder="+44..." required />
+            </label>
+
+            <label>
+              Email *
+              <input
+                type="email"
+                name="email"
+                placeholder="you@email.com"
+                required
+              />
+            </label>
+
+            <label>
+              Delivery address
+              <textarea
+                name="address"
+                placeholder="Your delivery address"
+                rows="3"
+              ></textarea>
+            </label>
+
+            <button class="checkout-form__button" type="submit">
+              PLACE ORDER
+              <i class="ri-arrow-right-line"></i>
+            </button>
+          </form>
+        </div>
+
+        <div class="checkout-success" id="js-checkout-success">
+          <div class="checkout-success__icon">
+            <i class="ri-check-line"></i>
+          </div>
+
+          <span class="section__eyebrow">THANK YOU</span>
+
+          <h2>Order received</h2>
+
+          <p>Your EMBER order has been created successfully.</p>
+
+          <button class="button" id="js-checkout-finish" type="button">
+            BACK TO SHOP
+          </button>
+        </div>
+      </div>
+    </section>
 
     <!--=============== JS ===============-->
     <script src="./js/main.js"></script>
