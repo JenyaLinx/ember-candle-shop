@@ -1011,7 +1011,7 @@ a {
 .ritual__decor--wax {
   top: 18%;
   left: 16px;
-  width: 58px;
+  width: 78px;
 
   animation: ritual-wax-float 5s ease-in-out infinite;
 }
@@ -1019,7 +1019,7 @@ a {
 .ritual__decor--shell {
   top: 38%;
   left: 18px;
-  width: 66px;
+  width: 88px;
 
   animation: ritual-shell-float 5.8s ease-in-out infinite;
 }
@@ -1242,9 +1242,9 @@ a {
   position: absolute;
 
   right: -15px;
-  bottom: -22px;
+  bottom: 166px;
 
-  width: 90px;
+  width: 200px;
 
   animation: float-decor 5s ease-in-out infinite;
 }
@@ -1307,6 +1307,25 @@ a {
 
   font-size: 10px;
 }
+.footer__credit {
+  margin-top: 6px;
+
+  color: var(--text-color);
+  font-size: 10px;
+}
+
+.footer__credit a {
+  color: var(--gold-color);
+  font-weight: 600;
+
+  transition: color 0.3s ease;
+}
+
+.footer__credit a:hover {
+  color: var(--cream-color);
+  text-decoration: underline;
+}
+
 
 /*=============== CART ===============*/
 .cart-overlay,
