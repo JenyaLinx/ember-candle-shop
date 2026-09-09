@@ -7,11 +7,13 @@ const navLinks = document.querySelectorAll(".nav-link");
 /*=============== SHOW MENU ===============*/
 const showMenu = () => {
   navMenu?.classList.add("show-menu");
+  document.body.classList.add("menu-open");
 };
 
 /*=============== HIDE MENU ===============*/
 const hideMenu = () => {
   navMenu?.classList.remove("show-menu");
+  document.body.classList.remove("menu-open");
 };
 
 navToggle?.addEventListener("click", showMenu);
