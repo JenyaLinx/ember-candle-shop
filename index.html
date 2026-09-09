@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>EMBER Candle Shop</title>
+  </head>
+
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#home" class="nav-logo">
+          <span class="nav-logo__icon">E</span>
+          <span>EMBER</span>
+        </a>
+
+        <div class="nav-menu" id="js-nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link">HOME</a></li>
+            <li><a href="#about" class="nav-link">ABOUT</a></li>
+            <li><a href="#shop" class="nav-link">SHOP</a></li>
+            <li><a href="#ritual" class="nav-link">RITUAL SET</a></li>
+            <li><a href="#contact" class="nav-link">CONTACT</a></li>
+          </ul>
+
+          <button class="nav-close" id="js-nav-close" type="button">
+            <i class="ri-close-large-line"></i>
+          </button>
+        </div>
+
+        <div class="nav-actions">
+          <button
+            class="nav-cart"
+            id="js-cart-open"
+            type="button"
+            aria-label="Open shopping cart"
+          >
+            <i class="ri-shopping-bag-4-line"></i>
+            <span class="nav-cart__count">0</span>
+          </button>
+
+          <button class="nav-toggle" id="js-nav-toggle" type="button">
+            <i class="ri-apps-2-fill"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!--=============== HOME ===============-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__data">
+            <span class="home__eyebrow">HANDMADE CANDLE SHOP</span>
+
+            <h1 class="home__title">
+              SCULPTED <br />
+              CANDLES <br />
+              <span>MADE TO GLOW</span>
+            </h1>
+
+            <p class="home__description">
+              Hand-poured statement candles made in small batches. Designed to
+              bring warmth, character and a little art into your home.
+            </p>
+
+            <a href="#shop" class="button">
+              SHOP CANDLES
+              <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+
+          <div class="home__images">
+            <div class="home__glow"></div>
+
+            <div class="home__placeholder">
+              <span>EMBER</span>
+              <p>Hero image coming next</p>
+            </div>
+
+            <span class="home__decor home__decor--1">✦</span>
+            <span class="home__decor home__decor--2">✦</span>
+            <span class="home__decor home__decor--3">✦</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== JS ===============-->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
