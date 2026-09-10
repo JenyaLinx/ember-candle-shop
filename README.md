@@ -6,7 +6,7 @@ EMBER Candle Shop combines a warm premium visual style with a product collection
 
 ## 🌐 Live Demo
 
-👉 [**LIVE DEMO LINK**](https://ember-candle-shop.netlify.app/)
+👉 https://ember-candle-shop.netlify.app/
 
 ### Home Page
 
@@ -16,25 +16,25 @@ A warm editorial hero section introducing the EMBER brand and its handmade sculp
 
 ### About
 
-![EMBER Candle Shop About](./img/readme/about.jpg)
+![EMBER Candle Shop About](./img/readme/about.png)
 
 The About section tells the story behind EMBER, highlighting small-batch production, hand-finished products, and the handmade character of the brand.
 
 ### Shop
 
-![EMBER Candle Shop Collection](./img/readme/shop.jpg)
+![EMBER Candle Shop Collection](./img/readme/shop.png)
 
 A responsive product collection featuring different sculptural candles with product images, prices, and Add to Cart functionality.
 
 ### Ritual Set
 
-![EMBER Ritual Set](./img/readme/ritual.jpg)
+![EMBER Ritual Set](./img/readme/ritual.png)
 
 A curated gift set featuring sculptural candles, mineral bath salts, decorative shell pieces, and premium gift box packaging.
 
 ### Contact
 
-![EMBER Candle Shop Contact](./img/readme/contact.jpg)
+![EMBER Candle Shop Contact](./img/readme/contact.png)
 
 A simple brand-focused contact section with social media links and a warm visual presentation.
 
@@ -102,7 +102,7 @@ Order information will be sent securely through a backend endpoint so Telegram c
 
 ## 📁 Repository
 
-👉 [**REPOSITORY LINK**](https://github.com/JenyaLinx/ember-candle-shop)
+👉 https://github.com/JenyaLinx/ember-candle-shop
 
 ---
 
