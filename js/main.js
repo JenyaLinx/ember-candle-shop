@@ -338,7 +338,7 @@ checkoutOverlay?.addEventListener(
 );
 
 /*=============== PLACE ORDER ===============*/
-checkoutForm?.addEventListener("submit", (event) => {
+checkoutForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (!checkoutForm.checkValidity()) {
@@ -346,28 +346,81 @@ checkoutForm?.addEventListener("submit", (event) => {
     return;
   }
 
-  /*
-    Telegram integration will be added later.
+  const formData = new FormData(checkoutForm);
 
-    At that stage we will send:
-    - Name
-    - Phone
-    - Email
-    - Address
-    - Order items
-    - Quantities
-    - Total
-  */
+  const name = formData.get("name");
+  const phone = formData.get("phone");
+  const email = formData.get("email");
+  const comment = formData.get("comment");
 
-  checkoutFormContent.style.display = "none";
+  const total = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0,
+  );
 
-  checkoutSuccess?.classList.add("show-success");
+  const submitButton = checkoutForm.querySelector(
+    'button[type="submit"]',
+  );
 
-  cartItems = [];
+  try {
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.innerHTML = `
+        SENDING...
+        <i class="ri-loader-4-line"></i>
+      `;
+    }
 
-  updateCart();
+    const response = await fetch(
+      "/.netlify/functions/send-order",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          comment,
+          items: cartItems,
+          total,
+        }),
+      },
+    );
 
-  checkoutForm.reset();
+    const data = await response.json();
+
+    if (!response.ok || !data.success) {
+      throw new Error(
+        data.error || "Failed to send order",
+      );
+    }
+
+    checkoutFormContent.style.display = "none";
+
+    checkoutSuccess?.classList.add("show-success");
+
+    cartItems = [];
+
+    updateCart();
+
+    checkoutForm.reset();
+  } catch (error) {
+    console.error("Order error:", error);
+
+    alert(
+      "Something went wrong while sending your order. Please try again.",
+    );
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.innerHTML = `
+        PLACE ORDER
+        <i class="ri-arrow-right-line"></i>
+      `;
+    }
+  }
 });
 
 /*=============== FINISH CHECKOUT ===============*/
