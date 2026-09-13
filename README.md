@@ -50,6 +50,8 @@ A simple brand-focused contact section with social media links and a warm visual
 - 🎁 Curated Ritual Gift Set
 - 💬 Order comment field
 - 🧾 Checkout modal
+- 📲 Telegram order notifications
+- 🔐 Secure serverless order processing with Netlify Functions
 - ✨ Animated decorative elements
 - 🖼️ Optimized WebP product images
 - 🍔 Responsive mobile navigation
@@ -65,6 +67,8 @@ A simple brand-focused contact section with social media links and a warm visual
 - CSS Grid
 - Flexbox
 - CSS Animations
+- Netlify Functions
+- Telegram Bot API
 - Remix Icon
 - WebP image optimization
 
@@ -85,6 +89,8 @@ During this project I worked on:
 - Creating responsive mobile navigation
 - Improving visual hierarchy, spacing, and image presentation across different screen sizes
 - Creating custom EMBER branding with a logo and favicon
+- Integrating the checkout system with the Telegram Bot API
+- Creating a secure Netlify serverless function for processing and sending customer orders
 
 ## 🛒 Shopping Cart
 
@@ -94,11 +100,23 @@ The cart dynamically updates product quantities and calculates the total order v
 
 The checkout form collects customer information and allows customers to leave an optional comment with their order.
 
-## 📲 Telegram Integration
+## 📲 Telegram Order Integration
 
-Telegram order notifications are planned for a future update.
+The checkout system is integrated with the Telegram Bot API using a secure Netlify serverless function.
 
-Order information will be sent securely through a backend endpoint so Telegram credentials are not exposed in the frontend.
+When a customer places an order, the website sends the order data to the serverless backend, which securely forwards the order details to Telegram.
+
+Each notification includes:
+
+- Customer name
+- Phone number
+- Email address
+- Ordered products
+- Product quantities
+- Total order value
+- Optional customer comment
+
+The Telegram bot token and chat ID are stored securely as Netlify environment variables and are never exposed in the frontend code.
 
 ## 📁 Repository
 
