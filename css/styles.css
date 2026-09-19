@@ -2289,8 +2289,21 @@ a {
     top: 90px;
     right: 3%;
 
-    width: 90px;
+    width: 190px;
+    animation: flowerFloat 4s ease-in-out infinite;
   }
+  
+  @keyframes flowerFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-5deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(12deg) scale(1.08);
+  }
+}
+
 
   .shop__decor--2 {
     bottom: 110px;
