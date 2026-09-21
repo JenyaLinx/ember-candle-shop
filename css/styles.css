@@ -668,7 +668,7 @@ a {
 
 .home__extra-decor--shell {
   top: 67%;
-  right: 12%;
+  right: 1%;
 
   width: 136px;
 
@@ -1017,8 +1017,8 @@ a {
 }
 
 .ritual__decor--shell {
-  top: 38%;
-  left: 18px;
+  top: 28%;
+  left: 10px;
   width: 88px;
 
   animation: ritual-shell-float 5.8s ease-in-out infinite;
@@ -1975,8 +1975,8 @@ a {
   }
 
   .ritual__decor--shell {
-    left: 55px;
-    width: 180px;
+    left: 5px;
+    width: 160px;
     z-index: 7;
   }
 
@@ -2354,14 +2354,14 @@ a {
 
   .ritual__decor--wax {
     top: 18%;
-    left: calc(50% - 650px);
-    width: 72px;
+    left: calc(50% - 550px);
+    width: 122px;
   }
 
   .ritual__decor--shell {
-    top: 55%;
+    top: 45%;
     left: calc(50% - 640px);
-    width: 82px;
+    width: 182px;
   }
 
   .ritual__decor--petal-1 {
