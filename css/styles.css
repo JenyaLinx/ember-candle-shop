@@ -1895,6 +1895,11 @@ a {
     margin-bottom: 44px;
   }
 
+  .home__decor--2 {
+  right: 40%;
+  bottom: 12%;
+}
+
   .about__grid {
     grid-template-columns: 1fr 1fr;
     align-items: start;
@@ -1988,6 +1993,7 @@ a {
   .ritual__decor--petal-2 {
     right: 22px;
     width: 66px;
+    top: 50%;
   }
 
   /* CONTACT */
@@ -2015,9 +2021,9 @@ a {
   }
 
   .home__extra-decor--shell {
-    top: 66%;
-    right: 10%;
-    width: 120px;
+    top: 60%;
+    right: 5%;
+    width: 150px;
   }
 }
 
